@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class OdontologoService implements ICrudService<OdontologoDTO>{
+public class OdontologoService implements ICrudService<OdontologoDTO> {
 
     @Autowired//repository vamos a heredar todos lo metodos de RPA
     private IOdontologoRepository odontologoRepository;
@@ -25,7 +25,7 @@ public class OdontologoService implements ICrudService<OdontologoDTO>{
         //busco el odontologo por el id
         Optional<Odontologo> odontologo = odontologoRepository.findById(id); // findById returna un objeto del tipo Optional-> puede ser null
         //para return, tiene que ser del tipo DTO. tengo que mapearlo.
-        OdontologoDTO odontologoDTO= mapper.convertValue(odontologo, OdontologoDTO.class);
+        OdontologoDTO odontologoDTO = mapper.convertValue(odontologo, OdontologoDTO.class);
         return odontologoDTO;
     }
 
@@ -37,7 +37,7 @@ public class OdontologoService implements ICrudService<OdontologoDTO>{
         Odontologo resOdontologo = odontologoRepository.save(odontologo);
         //aca podriamos validar el return.
         //tenemos que returnar algo del tipo odontologoDTO
-        OdontologoDTO resOdontologoDTO = mapper.convertValue(resOdontologo,OdontologoDTO.class);
+        OdontologoDTO resOdontologoDTO = mapper.convertValue(resOdontologo, OdontologoDTO.class);
         return resOdontologoDTO;
     }
 
@@ -59,12 +59,24 @@ public class OdontologoService implements ICrudService<OdontologoDTO>{
         return resOdontologoDTO;
     }
 
+    /*
+    @Override
+    public OdontologoDTO update(OdontologoDTO dentistDto) {
+        Optional<Odontologo> optionalDentist = mapper.convertValue(dentistDto, Optional.class);
+        if (optionalDentist.isPresent()) {
+            Dentist dentist = mapper.convertValue(optionalDentist, Dentist.class);
+            return mapper.convertValue(iDentistRepository.save(dentist), DentistDto.class);
+        }
+        return null;
+    }
+    */
+
     @Override
     public List<OdontologoDTO> findAll() {
         //Puedo usar List o Set. La unica diferencia es que Set prevee que tenga elementos repetidos.
         List<Odontologo> odontologos = odontologoRepository.findAll();
         List<OdontologoDTO> odontologosDTO = new ArrayList<>();
-        for (Odontologo o : odontologos){
+        for (Odontologo o : odontologos) {
             odontologosDTO.add(mapper.convertValue(o, OdontologoDTO.class));
         }
         return odontologosDTO;

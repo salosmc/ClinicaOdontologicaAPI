@@ -5,9 +5,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /*Facilidades de lombok como los getters y setters*/
+@Data
+/*
 @Getter
 @Setter
 @NoArgsConstructor
+*/
 //@AllArgsConstructor //no puedo omitir el id como arg en el constructor
 
 /*Cosas de JPA para la BD*/
@@ -24,18 +27,13 @@ public class Odontologo {
     private String matricula;
 
     //Creo el constructr a manopla por que no se como omitir el id
-    public Odontologo(String nombre, String apellido, String matricula) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.matricula = matricula;
+    public Odontologo() {
     }
 
     //por las dudas sobreescribo el setId, ya que no deberia poder setearlo
     //@Override
-    public void setId(Long id) {
-    }
 
-
+/*
     //Metodos útiles
     @Override
     public String toString() {
@@ -57,6 +55,7 @@ public class Odontologo {
     public int hashCode() {
         return Objects.hash(id, nombre, apellido, matricula);
     }
-
+*/
+    //el @Data trae toda esta mierda
 }
 
