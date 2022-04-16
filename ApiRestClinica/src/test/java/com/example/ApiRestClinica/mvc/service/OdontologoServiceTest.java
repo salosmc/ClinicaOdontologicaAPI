@@ -18,8 +18,8 @@ class OdontologoServiceTest {
 
     @Test
     void findById() {
-        OdontologoDTO odontologoDTO = odontologoService.findById(1L);
-        assertEquals(1L,odontologoDTO.getId());
+        OdontologoDTO odontologoDTO = odontologoService.findById(3L);
+        assertEquals(3L,odontologoDTO.getId());
     }
 
     @Test
@@ -34,13 +34,13 @@ class OdontologoServiceTest {
 
     @Test
     void deleteById() {
-        odontologoService.deleteById(1L);
+        odontologoService.deleteById(21L);
         assertEquals(false, odontologoService.findById(1L) != null );
     }
 
     @Test
     void update() {
-        OdontologoDTO odontologoDTO = odontologoService.findById(2L);
+        OdontologoDTO odontologoDTO = odontologoService.findById(3L);
         odontologoDTO.setMatricula("555");
         assertEquals(true, odontologoService.update(odontologoDTO) != null);
     }

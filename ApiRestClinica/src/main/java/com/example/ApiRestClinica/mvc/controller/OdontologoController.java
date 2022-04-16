@@ -19,7 +19,7 @@ public class OdontologoController {
     @Autowired
     ICrudService odontologoService;
      */
-
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<OdontologoDTO> findById(@PathVariable Long id){
         OdontologoDTO odontologoDTO = odontologoService.findById(id);
@@ -27,6 +27,15 @@ public class OdontologoController {
         return ResponseEntity.ok(odontologoDTO);
     }
 
+    @CrossOrigin
+    @GetMapping("/{nombre}/{apellido}/{matricula}")
+    public ResponseEntity<List<OdontologoDTO>> findByAll(@PathVariable String nombre,@PathVariable String apellido,@PathVariable String matricula){
+        List<OdontologoDTO> odontologosDTO = odontologoService.findByAll(nombre,apellido,matricula);
+        //falta validar
+        return ResponseEntity.ok(odontologosDTO);
+    }
+
+    @CrossOrigin
     @GetMapping
     public ResponseEntity<List<OdontologoDTO>> findAll(){
         List<OdontologoDTO> odontologosDTO = odontologoService.findAll();
@@ -34,6 +43,7 @@ public class OdontologoController {
         return ResponseEntity.ok(odontologosDTO);
     }
 
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<OdontologoDTO> create(@RequestBody OdontologoDTO odontologoDTO){
         OdontologoDTO resOdontologDTO = odontologoService.create(odontologoDTO);
@@ -41,6 +51,7 @@ public class OdontologoController {
         return ResponseEntity.ok(resOdontologDTO);
     }
 
+    @CrossOrigin
     @PutMapping
     public ResponseEntity<OdontologoDTO> update(@RequestBody OdontologoDTO odontologoDTO){
         OdontologoDTO resOdontologDTO = odontologoService.update(odontologoDTO);
@@ -48,6 +59,7 @@ public class OdontologoController {
         return ResponseEntity.ok(resOdontologDTO);
     }
 
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteById(@PathVariable Long id){
         odontologoService.deleteById(id);

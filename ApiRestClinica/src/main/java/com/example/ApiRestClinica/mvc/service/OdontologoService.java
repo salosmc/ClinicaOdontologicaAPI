@@ -29,6 +29,16 @@ public class OdontologoService implements ICrudService<OdontologoDTO> {
         return odontologoDTO;
     }
 
+    public List<OdontologoDTO> findByAll(String nombre, String apellido, String matricula){
+
+        List<Odontologo> odontologos = odontologoRepository.findByAll(nombre, apellido, matricula);
+        List<OdontologoDTO> odontologosDTO = new ArrayList<>();
+        for(Odontologo odontologo : odontologos){
+            odontologosDTO.add(mapper.convertValue(odontologo, OdontologoDTO.class));
+        }
+        return odontologosDTO;
+    }
+
     @Override
     public OdontologoDTO create(OdontologoDTO odontologoDTO) {
         //primero convierto DTO a una entidad

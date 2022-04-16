@@ -33,29 +33,5 @@ public class Odontologo {
     //por las dudas sobreescribo el setId, ya que no deberia poder setearlo
     //@Override
 
-/*
-    //Metodos útiles
-    @Override
-    public String toString() {
-        return "Odontologo{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", matricula='" + matricula + '\'' +
-                '}';
-    }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Odontologo that = (Odontologo) o;
-        return Objects.equals(id, that.id) && Objects.equals(nombre, that.nombre) && Objects.equals(apellido, that.apellido) && Objects.equals(matricula, that.matricula);
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nombre, apellido, matricula);
-    }
-*/
-    //el @Data trae toda esta mierda
 }
 
