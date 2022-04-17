@@ -32,6 +32,15 @@ public class PacienteController {
         return ResponseEntity.ok(pacientesDTO);
     }
 
+
+    @CrossOrigin
+    @GetMapping("/{nombre}/{apellido}/{dni}")
+    public ResponseEntity<List<PacienteDTO>> findByAll(@PathVariable String nombre,@PathVariable String apellido,@PathVariable String dni){
+        List<PacienteDTO> pacientesDTO = pacienteService.findByAll(nombre, apellido, dni);
+        //falta validar
+        return ResponseEntity.ok(pacientesDTO);
+    }
+
     @CrossOrigin
     @PostMapping
     public ResponseEntity<PacienteDTO> create(@RequestBody PacienteDTO pacienteDTO){

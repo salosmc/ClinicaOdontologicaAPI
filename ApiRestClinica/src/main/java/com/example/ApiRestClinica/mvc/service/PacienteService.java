@@ -27,6 +27,16 @@ public class PacienteService implements ICrudService<PacienteDTO>{
         return pacienteDTO;
     }
 
+    public List<PacienteDTO> findByAll(String nombre,String apellido,String dni){
+
+        List<Paciente> newPacientes = pacienteRepository.findByAll(nombre,apellido,dni);
+        List<PacienteDTO> pacientesDTO = new ArrayList<>();
+        for(Paciente p : newPacientes){
+            pacientesDTO.add(mapper.convertValue(p,PacienteDTO.class));
+        }
+        return pacientesDTO;
+    }
+
     @Override
     public PacienteDTO create(PacienteDTO pacienteDTO) {
         Paciente paciente = mapper.convertValue(pacienteDTO, Paciente.class);

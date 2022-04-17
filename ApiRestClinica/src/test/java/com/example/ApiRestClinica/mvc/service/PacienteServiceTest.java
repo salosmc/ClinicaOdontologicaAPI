@@ -1,10 +1,12 @@
 package com.example.ApiRestClinica.mvc.service;
 
 import com.example.ApiRestClinica.dto.PacienteDTO;
+import com.example.ApiRestClinica.model.Domicilio;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,9 +22,18 @@ class PacienteServiceTest {
     @Test
     void create() {
         PacienteDTO pacienteDTO = new PacienteDTO();
+
+        Domicilio domicilio = new Domicilio();
+        domicilio.setCalle("siempre viva");
+        domicilio.setNumero("124");
+        domicilio.setLocalidad("Sprinfid");
+        domicilio.setProvincia("Fox");
+
         pacienteDTO.setNombre("Andrea");
         pacienteDTO.setApellido("Colodro");
-        pacienteDTO.setDomicilio("Calle Siempre viva 123");
+        pacienteDTO.setDni("98543213");
+        //pacienteDTO.setFechaAlta("2022-04-17");
+        pacienteDTO.setDomicilio(domicilio);
 
         assertEquals(true,pacienteService.create(pacienteDTO)!=null);
     }

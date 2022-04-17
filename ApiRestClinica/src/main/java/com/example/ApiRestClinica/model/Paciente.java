@@ -2,10 +2,8 @@ package com.example.ApiRestClinica.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -17,6 +15,11 @@ public class Paciente {
 
     private String nombre;
     private String apellido;
-    private String domicilio;
+    private String dni;
+    private LocalDate fechaAlta;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_direccion", referencedColumnName = "id")
+    private Domicilio domicilio;
 
 }
