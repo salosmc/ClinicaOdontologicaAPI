@@ -1,11 +1,20 @@
 package com.example.ApiRestClinica.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+
+@AllArgsConstructor //no puedo omitir el id como arg en el constructor
+
 @Entity
 
 public class Paciente {
@@ -20,6 +29,12 @@ public class Paciente {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_direccion", referencedColumnName = "id")
+    @JsonIgnore
     private Domicilio domicilio;
+
+    @OneToMany(mappedBy = "paciente")
+    //@JoinColumn(name = "fk_turnos_paciente", referencedColumnName = "id")
+    @JsonIgnore
+    private Set<Turno> turnos ;
 
 }

@@ -1,9 +1,15 @@
 package com.example.ApiRestClinica.dto;
 
+import com.example.ApiRestClinica.model.Turno;
 import lombok.*;
+
+import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class OdontologoDTO {
 
@@ -12,6 +18,6 @@ public class OdontologoDTO {
     private String apellido;
     private String matricula;
 
-    public OdontologoDTO() {
-    }
+    private Set<Turno> turnos;
+
 }

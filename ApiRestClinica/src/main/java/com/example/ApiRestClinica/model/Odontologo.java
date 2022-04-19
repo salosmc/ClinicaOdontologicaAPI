@@ -1,21 +1,23 @@
 package com.example.ApiRestClinica.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+
 import javax.persistence.*;
-import java.util.Objects;
+import java.util.Set;
 
 /*Facilidades de lombok como los getters y setters*/
-@Data
-/*
+//@Data
+
 @Getter
 @Setter
 @NoArgsConstructor
-*/
-//@AllArgsConstructor //no puedo omitir el id como arg en el constructor
+
+@AllArgsConstructor //no puedo omitir el id como arg en el constructor
 
 /*Cosas de JPA para la BD*/
 @Entity //declaramos que es una entidad
-@Table //y que va a ser una tabla en bd
+//@Table //y que va a ser una tabla en bd
 
 public class Odontologo {
     @Id //define el id
@@ -26,12 +28,10 @@ public class Odontologo {
     private String apellido;
     private String matricula;
 
-    //Creo el constructr a manopla por que no se como omitir el id
-    public Odontologo() {
-    }
-
-    //por las dudas sobreescribo el setId, ya que no deberia poder setearlo
-    //@Override
+    @OneToMany(mappedBy = "odontologo")
+    //@JoinColumn(name = "fk_turnos_odontologo",referencedColumnName = "id")
+    @JsonIgnore
+    private Set<Turno> turnos;// = new ArrayList<Turno>();
 
 }
 
