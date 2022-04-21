@@ -25,12 +25,12 @@ public class Turno {
     private LocalDate fecha;
     private LocalTime hora;
 
-    @ManyToOne//(cascade = CascadeType.PERSIST)//Me permite evitar que elimien algun odontologo cuando eliminan algun turno
+    @ManyToOne(fetch= FetchType.EAGER)//(cascade = CascadeType.PERSIST)//Me permite evitar que elimien algun odontologo cuando eliminan algun turno
     @JoinColumn(name = "odontologo_id",referencedColumnName = "id")
     @JsonIgnore
     private Odontologo odontologo;
 
-    @ManyToOne//(cascade = CascadeType.PERSIST)
+    @ManyToOne//(fetch= FetchType.EAGER)//(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "paciente_id",referencedColumnName = "id")
     @JsonIgnore
     private Paciente paciente;

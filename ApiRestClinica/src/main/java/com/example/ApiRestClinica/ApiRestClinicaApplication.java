@@ -8,10 +8,12 @@ import org.modelmapper.ModelMapper;
 @SpringBootApplication
 public class ApiRestClinicaApplication {
 
+
 	@Bean
 	public ModelMapper modelMapper(){
 		return new ModelMapper();
 	}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiRestClinicaApplication.class, args);

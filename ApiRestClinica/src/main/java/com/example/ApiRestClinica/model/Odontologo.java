@@ -22,13 +22,14 @@ import java.util.Set;
 public class Odontologo {
     @Id //define el id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //como se va a generar ese id
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     private String nombre;
     private String apellido;
     private String matricula;
 
-    @OneToMany(mappedBy = "odontologo")
+    @OneToMany(mappedBy = "odontologo",fetch= FetchType.EAGER)//
     //@JoinColumn(name = "fk_turnos_odontologo",referencedColumnName = "id")
     @JsonIgnore
     private Set<Turno> turnos;// = new ArrayList<Turno>();
