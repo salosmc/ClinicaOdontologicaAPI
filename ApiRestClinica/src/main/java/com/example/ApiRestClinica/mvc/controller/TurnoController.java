@@ -1,7 +1,7 @@
 package com.example.ApiRestClinica.mvc.controller;
 
 import com.example.ApiRestClinica.dto.TurnoDTO;
-import com.example.ApiRestClinica.mvc.service.TurnoService;
+import com.example.ApiRestClinica.mvc.serviceTestsUnitarios.TurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

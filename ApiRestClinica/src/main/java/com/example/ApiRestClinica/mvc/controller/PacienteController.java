@@ -1,11 +1,9 @@
 package com.example.ApiRestClinica.mvc.controller;
 
-import com.example.ApiRestClinica.dto.OdontologoDTO;
 import com.example.ApiRestClinica.dto.PacienteDTO;
-import com.example.ApiRestClinica.mvc.service.PacienteService;
+import com.example.ApiRestClinica.mvc.serviceTestsUnitarios.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,7 +43,7 @@ public class PacienteController {
     @PostMapping
     public ResponseEntity<PacienteDTO> create(@RequestBody PacienteDTO pacienteDTO){
         PacienteDTO pacienteNewDTO = pacienteService.create(pacienteDTO);
-        return ResponseEntity.ok(pacienteDTO);
+        return ResponseEntity.ok(pacienteNewDTO);
     }
 
     @CrossOrigin

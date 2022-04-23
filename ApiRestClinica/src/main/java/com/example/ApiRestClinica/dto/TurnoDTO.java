@@ -17,6 +17,7 @@ public class TurnoDTO {
     private Long id;
     private LocalDate fecha;
     private LocalTime hora;
+
     private Paciente paciente;
     private Odontologo odontologo;
 }

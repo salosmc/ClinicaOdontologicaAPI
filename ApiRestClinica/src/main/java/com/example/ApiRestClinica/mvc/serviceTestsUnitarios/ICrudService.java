@@ -1,4 +1,4 @@
-package com.example.ApiRestClinica.mvc.service;
+package com.example.ApiRestClinica.mvc.serviceTestsUnitarios;
 
 import java.util.List;
 

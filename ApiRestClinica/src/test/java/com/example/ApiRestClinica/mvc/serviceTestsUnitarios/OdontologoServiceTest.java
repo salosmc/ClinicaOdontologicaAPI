@@ -1,17 +1,11 @@
-package com.example.ApiRestClinica.mvc.service;
+package com.example.ApiRestClinica.mvc.serviceTestsUnitarios;
 
 import com.example.ApiRestClinica.dto.OdontologoDTO;
-import com.example.ApiRestClinica.model.Odontologo;
-import com.example.ApiRestClinica.mvc.repository.IOdontologoRepository;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.modelmapper.MappingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,8 +33,7 @@ class OdontologoServiceTest {
     @Test
     void findById() {
         Long id = loadOdontologoDTO().getId();
-        OdontologoDTO resOdontologo = odontologoService.findById(id);
-        assertEquals(1L,resOdontologo.getId());
+        assertTrue(odontologoService.findById(id)!=null);
     }
 
     @Test
@@ -52,25 +45,16 @@ class OdontologoServiceTest {
     }
 
     @Test
-    void deleteById() {
-        //Long id = loadOdontologoDTO().getId();
-        odontologoService.deleteById(1L);
-        assertFalse(odontologoService.findById(1L) != null );
+    void findAll() {
+        List<OdontologoDTO> odontologos= odontologoService.findAll();
+        assertFalse( odontologos.isEmpty());
     }
 
     @Test
-    void findAll() {
-/*
-        MappingException exception = Assertions.assertThrows(MappingException.class, () -> {
-            //Code under test
-
-        });
-        System.out.println(exception.getCause().getMessage());
-        //Assertions.assertEquals("some message", exception.getMessage());
-*/
-        List<OdontologoDTO> odontologos= odontologoService.findAll();
-        assertFalse( odontologos.isEmpty());
-
-
+    void deleteById() {
+        Long id = loadOdontologoDTO().getId();
+        odontologoService.deleteById(id);
+        assertFalse(odontologoService.findById(id) != null );
     }
+
 }

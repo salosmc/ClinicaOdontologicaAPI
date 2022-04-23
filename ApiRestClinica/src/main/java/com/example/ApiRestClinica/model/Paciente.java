@@ -20,6 +20,7 @@ import java.util.Set;
 public class Paciente {
     @Id //define el id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //como se va a generar ese id
+    @Setter(AccessLevel.NONE)//evito que se pueda setear
     private Long id;
 
     private String nombre;
@@ -32,7 +33,7 @@ public class Paciente {
     @JsonIgnore
     private Domicilio domicilio;
 
-    @OneToMany(mappedBy = "paciente")
+    @OneToMany(mappedBy = "paciente",fetch= FetchType.EAGER)
     //@JoinColumn(name = "fk_turnos_paciente", referencedColumnName = "id")
     @JsonIgnore
     private Set<Turno> turnos ;

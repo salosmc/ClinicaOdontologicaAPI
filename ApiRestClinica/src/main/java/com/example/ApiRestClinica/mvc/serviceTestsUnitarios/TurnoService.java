@@ -1,9 +1,8 @@
-package com.example.ApiRestClinica.mvc.service;
+package com.example.ApiRestClinica.mvc.serviceTestsUnitarios;
 
 import com.example.ApiRestClinica.dto.TurnoDTO;
 import com.example.ApiRestClinica.model.Turno;
 import com.example.ApiRestClinica.mvc.repository.ITurnoRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

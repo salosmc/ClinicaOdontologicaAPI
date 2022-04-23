@@ -20,6 +20,7 @@ import java.time.LocalTime;
 public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     private LocalDate fecha;
@@ -30,7 +31,7 @@ public class Turno {
     @JsonIgnore
     private Odontologo odontologo;
 
-    @ManyToOne//(fetch= FetchType.EAGER)//(cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch= FetchType.EAGER)//(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "paciente_id",referencedColumnName = "id")
     @JsonIgnore
     private Paciente paciente;
