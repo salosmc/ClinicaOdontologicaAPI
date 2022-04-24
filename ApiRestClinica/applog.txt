@@ -1,0 +1,69 @@
+ERROR   2022-04-24 16:01:35,289 [http-nio-8080-exec-5] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe un odontologo con el id: 3
+ERROR   2022-04-24 16:03:31,454 [http-nio-8080-exec-8] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - Error al buscar por id, tiene que ser un numero positivo :-1
+DEBUG   2022-04-24 16:27:46,645 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:27:58,674 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 16:27:58,693 [http-nio-8080-exec-5] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 16:28:18,611 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:31:56,009 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:32:31,575 [http-nio-8080-exec-9] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:33:44,903 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:37:17,026 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:41:27,893 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 16:41:27,921 [http-nio-8080-exec-7] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 16:41:40,515 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 16:41:40,539 [http-nio-8080-exec-8] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 16:41:47,332 [http-nio-8080-exec-9] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+DEBUG   2022-04-24 16:49:37,693 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+ERROR   2022-04-24 16:49:37,733 [http-nio-8080-exec-5] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 1
+DEBUG   2022-04-24 16:49:44,695 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 16:49:44,726 [http-nio-8080-exec-4] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 17:04:59,982 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 17:05:00,008 [http-nio-8080-exec-4] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 17:05:05,784 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+ERROR   2022-04-24 17:05:05,830 [http-nio-8080-exec-5] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 1
+DEBUG   2022-04-24 17:05:11,454 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Eliminando odontologo : 3
+ERROR   2022-04-24 17:05:11,462 [http-nio-8080-exec-6] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 3
+DEBUG   2022-04-24 17:05:21,015 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@11241d17
+INFO    2022-04-24 17:05:21,115 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo actualizado : com.example.ApiRestClinica.dto.OdontologoDTO@70da94aa
+DEBUG   2022-04-24 17:05:40,566 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+INFO    2022-04-24 17:05:40,620 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo encontrado : com.example.ApiRestClinica.dto.OdontologoDTO@16001839
+DEBUG   2022-04-24 17:10:24,836 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+ERROR   2022-04-24 17:10:24,874 [http-nio-8080-exec-4] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 1
+DEBUG   2022-04-24 17:10:31,203 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@6990ac71
+ERROR   2022-04-24 17:10:31,210 [http-nio-8080-exec-5] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 1
+DEBUG   2022-04-24 17:10:48,158 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Guardando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@61924858
+INFO    2022-04-24 17:10:48,269 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo guardado : com.example.ApiRestClinica.dto.OdontologoDTO@42d212ac
+DEBUG   2022-04-24 17:10:53,693 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+INFO    2022-04-24 17:10:53,721 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo encontrado : com.example.ApiRestClinica.dto.OdontologoDTO@1a86f174
+DEBUG   2022-04-24 17:11:01,401 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@40574705
+INFO    2022-04-24 17:11:01,452 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo actualizado : com.example.ApiRestClinica.dto.OdontologoDTO@62ef4efd
+DEBUG   2022-04-24 17:12:38,216 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando odontologo por id : 1
+ERROR   2022-04-24 17:12:38,267 [http-nio-8080-exec-4] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 1
+DEBUG   2022-04-24 17:12:46,949 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@58148b91
+ERROR   2022-04-24 17:12:46,959 [http-nio-8080-exec-5] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 1
+DEBUG   2022-04-24 17:13:15,293 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Guardando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@205ab67f
+INFO    2022-04-24 17:13:15,393 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo guardado : com.example.ApiRestClinica.dto.OdontologoDTO@467cacb3
+DEBUG   2022-04-24 17:13:25,568 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@61924858
+INFO    2022-04-24 17:13:25,602 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo actualizado : com.example.ApiRestClinica.dto.OdontologoDTO@24be8b29
+DEBUG   2022-04-24 17:13:29,495 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@4813472e
+INFO    2022-04-24 17:13:29,535 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo actualizado : com.example.ApiRestClinica.dto.OdontologoDTO@3648fcd1
+DEBUG   2022-04-24 17:13:37,423 [http-nio-8080-exec-9] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+INFO    2022-04-24 17:13:37,504 [http-nio-8080-exec-9] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologos encontrados
+DEBUG   2022-04-24 17:15:28,865 [http-nio-8080-exec-4] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 17:15:28,903 [http-nio-8080-exec-4] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 17:15:52,782 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Guardando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@6b4d969e
+INFO    2022-04-24 17:15:52,872 [http-nio-8080-exec-5] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo guardado : com.example.ApiRestClinica.dto.OdontologoDTO@6e0d721e
+DEBUG   2022-04-24 17:16:15,445 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@fadbb44
+INFO    2022-04-24 17:16:15,533 [http-nio-8080-exec-6] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo actualizado : com.example.ApiRestClinica.dto.OdontologoDTO@7f509c8f
+DEBUG   2022-04-24 17:16:37,170 [http-nio-8080-exec-7] com.example.ApiRestClinica.mvc.service.OdontologoService  - Actualizando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@7f497247
+ERROR   2022-04-24 17:16:37,181 [http-nio-8080-exec-7] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No existe odontologo con el id : 6
+DEBUG   2022-04-24 17:16:52,118 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Eliminando odontologo : 1
+INFO    2022-04-24 17:16:52,149 [http-nio-8080-exec-8] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo eliminado
+DEBUG   2022-04-24 17:17:07,437 [http-nio-8080-exec-9] com.example.ApiRestClinica.mvc.service.OdontologoService  - Buscando todos los odontologos
+ERROR   2022-04-24 17:17:07,449 [http-nio-8080-exec-9] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - La lista de odontologos esta vacia
+DEBUG   2022-04-24 17:17:28,282 [http-nio-8080-exec-10] com.example.ApiRestClinica.mvc.service.OdontologoService  - Filtrando odontologos por nombre, apellido y matricula : _, _, 6
+ERROR   2022-04-24 17:17:28,305 [http-nio-8080-exec-10] com.example.ApiRestClinica.exceptions.ResourceNotFoundException  - No se encontraron odontologos
+DEBUG   2022-04-24 17:17:42,572 [http-nio-8080-exec-2] com.example.ApiRestClinica.mvc.service.OdontologoService  - Guardando odontologo : com.example.ApiRestClinica.dto.OdontologoDTO@653f57b1
+INFO    2022-04-24 17:17:42,587 [http-nio-8080-exec-2] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo guardado : com.example.ApiRestClinica.dto.OdontologoDTO@46d41c07
+DEBUG   2022-04-24 17:17:52,443 [http-nio-8080-exec-1] com.example.ApiRestClinica.mvc.service.OdontologoService  - Filtrando odontologos por nombre, apellido y matricula : _, _, 6
+INFO    2022-04-24 17:17:52,471 [http-nio-8080-exec-1] com.example.ApiRestClinica.mvc.service.OdontologoService  - Odontologo encontrado.

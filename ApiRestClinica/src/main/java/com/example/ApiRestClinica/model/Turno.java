@@ -20,7 +20,7 @@ import java.time.LocalTime;
 public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
+    //@Setter(AccessLevel.NONE)
     private Long id;
 
     private LocalDate fecha;

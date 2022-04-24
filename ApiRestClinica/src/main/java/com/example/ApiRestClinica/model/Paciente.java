@@ -20,7 +20,7 @@ import java.util.Set;
 public class Paciente {
     @Id //define el id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //como se va a generar ese id
-    @Setter(AccessLevel.NONE)//evito que se pueda setear
+    //@Setter(AccessLevel.NONE)//evito que se pueda setear
     private Long id;
 
     private String nombre;

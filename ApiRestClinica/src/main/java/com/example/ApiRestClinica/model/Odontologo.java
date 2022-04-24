@@ -22,7 +22,7 @@ import java.util.Set;
 public class Odontologo {
     @Id //define el id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //como se va a generar ese id
-    @Setter(AccessLevel.NONE)
+    //@Setter(AccessLevel.NONE)
     private Long id;
 
     private String nombre;

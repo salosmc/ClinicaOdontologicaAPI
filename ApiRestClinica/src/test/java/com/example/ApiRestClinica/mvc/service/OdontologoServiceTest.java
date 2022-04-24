@@ -1,6 +1,7 @@
 package com.example.ApiRestClinica.mvc.service;
 
 import com.example.ApiRestClinica.dto.OdontologoDTO;
+import com.example.ApiRestClinica.exceptions.ResourceNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,19 +26,19 @@ class OdontologoServiceTest {
     }
 
     @Test
-    void create() {
+    void create() throws ResourceNotFoundException {
         OdontologoDTO odontologoDTO = odontologoService.create(loadOdontologoDTO());
         assertTrue(odontologoDTO != null);
     }
 
     @Test
-    void findById() {
+    void findById() throws ResourceNotFoundException {
         Long id = loadOdontologoDTO().getId();
         assertTrue(odontologoService.findById(id)!=null);
     }
 
     @Test
-    void update() {
+    void update() throws ResourceNotFoundException {
         OdontologoDTO odontologo = loadOdontologoDTO();
         odontologo.setMatricula(" ");
         OdontologoDTO resOdontologo = odontologoService.update(odontologo);
@@ -45,13 +46,13 @@ class OdontologoServiceTest {
     }
 
     @Test
-    void findAll() {
+    void findAll() throws ResourceNotFoundException {
         List<OdontologoDTO> odontologos= odontologoService.findAll();
         assertFalse( odontologos.isEmpty());
     }
 
     @Test
-    void deleteById() {
+    void deleteById() throws ResourceNotFoundException {
         Long id = loadOdontologoDTO().getId();
         odontologoService.deleteById(id);
         assertFalse(odontologoService.findById(id) != null );
