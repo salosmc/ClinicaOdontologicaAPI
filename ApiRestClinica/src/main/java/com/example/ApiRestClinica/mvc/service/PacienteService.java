@@ -1,4 +1,4 @@
-package com.example.ApiRestClinica.mvc.serviceTestsUnitarios;
+package com.example.ApiRestClinica.mvc.service;
 
 import com.example.ApiRestClinica.dto.PacienteDTO;
 import com.example.ApiRestClinica.model.Paciente;
