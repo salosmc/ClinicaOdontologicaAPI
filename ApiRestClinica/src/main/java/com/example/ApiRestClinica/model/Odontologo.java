@@ -11,9 +11,6 @@ import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
-
-@AllArgsConstructor //no puedo omitir el id como arg en el constructor
 
 /*Cosas de JPA para la BD*/
 @Entity //declaramos que es una entidad
@@ -33,6 +30,22 @@ public class Odontologo {
     //@JoinColumn(name = "fk_turnos_odontologo",referencedColumnName = "id")
     @JsonIgnore
     private Set<Turno> turnos;// = new ArrayList<Turno>();
+
+    public Odontologo() {
+    }
+
+    public Odontologo(String nombre, String apellido, String matricula) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.matricula = matricula;
+    }
+
+    public Odontologo(Long id, String nombre, String apellido, String matricula) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.matricula = matricula;
+    }
 
 }
 
