@@ -62,7 +62,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests().antMatchers("/turnos/**").hasAnyAuthority("ADMIN","USER")
                 .and()
-                .authorizeRequests().antMatchers("/authenticate").permitAll().anyRequest().authenticated()
+                .authorizeRequests().antMatchers(
+                        "/authenticate",
+                        "/swagger-ui/**",
+                        "/v3/api-docs/**"
+                ).permitAll().anyRequest().authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
