@@ -16,11 +16,13 @@ import java.util.Set;
 public class PacienteDTO {
 
     private Long id;
+
     private String nombre;
     private String apellido;
     private String dni;
     private LocalDate fechaAlta;
     private Domicilio domicilio;
+
     private Set<Turno> turnos;
 
 }
